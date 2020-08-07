@@ -18,11 +18,8 @@ options.add_argument('--incognito')
 options.add_argument('--headless')
 driver = webdriver.Chrome("G:\Projects\driver\chromedriver.exe", chrome_options=options)
 
-# symbol = raw_input("Enter the stock symbol you are interested in: \n")
-# exchange = raw_input("Enter the market this stock is traded on: \n")
-
-symbol = 'SONA'
-exchange = 'CSE'
+symbol = raw_input("Enter the stock symbol you are interested in: \n")
+exchange = raw_input("Enter the market this stock is traded on: \n")
 
 url = "https://www.tradingview.com/symbols/{}-{}/".format(exchange, symbol)
 

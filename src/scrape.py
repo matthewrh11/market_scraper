@@ -1,6 +1,5 @@
 import bs4
 import time
-import Tkinter as tk
 from selenium import webdriver
 from bs4 import BeautifulSoup
 
@@ -27,14 +26,8 @@ exchange = 'CSE'
 
 url = "https://www.tradingview.com/symbols/{}-{}/".format(exchange, symbol)
 
-
-root = tk.Tk()
-T = tk.Text(root, height=2, width=30)
-T.pack()
-
 while True:
     driver.get(url)
     price = get_price(driver.page_source)
-    T.insert(tk.END, "{}:{} \n {}".format(symbol, exchange, price))
-    tk.mainloop()
+    print ("\n \n The current price of {} on the {} is ${} a share. \n \n".format(symbol, exchange, price))
     time.sleep(15)
